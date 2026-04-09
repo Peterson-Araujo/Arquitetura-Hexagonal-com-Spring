@@ -1,6 +1,7 @@
 package io.github.petersonaraujo.arquitetura_api.adapter.mappers;
 
 import io.github.petersonaraujo.arquitetura_api.adapter.dtos.UsuarioDto;
+import io.github.petersonaraujo.arquitetura_api.adapter.entity.UsuarioEntity;
 import io.github.petersonaraujo.arquitetura_api.core.domain.Usuario;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
@@ -13,12 +14,13 @@ import org.mapstruct.factory.Mappers;
 )
 public interface UsuarioMapper {
 
-    UsuarioMapper INSTANCE = Mappers.getMapper(UsuarioMapper.class);
-
     // Converter DTO recebido para Model
     Usuario toModel(UsuarioDto usuarioDto);
 
     // Converter Model para DTO pro retorno da chamada
     UsuarioDto toResponse(Usuario usuario);
 
+    Usuario toModel(UsuarioEntity usuarioEntity);
+
+    UsuarioEntity toEntity(Usuario usuario);
 }
