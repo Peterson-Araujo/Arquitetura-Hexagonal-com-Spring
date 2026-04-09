@@ -1,3 +1,21 @@
 spring:
   application:
     name: arquitetura-api
+
+# Configuração do H2
+  h2:
+    console:
+      enable: true
+
+# Configurações do datasource
+  datasource:
+    url: jdbc:h2:mem:arquitetura-api
+    username: admin
+    password: admin
+
+# Configurações do JPA
+  jpa:
+    show.sql: true
+    properties:
+      hibernate:
+        format_sql: true
