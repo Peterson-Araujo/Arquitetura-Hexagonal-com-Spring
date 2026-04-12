@@ -1,6 +1,8 @@
 package io.github.petersonaraujo.arquitetura_api.adapter.controllers.output;
 
-import io.github.petersonaraujo.arquitetura_api.adapter.mappers.UsuarioMapper;
+import io.github.petersonaraujo.arquitetura_api.adapter.controllers.converters.UsuarioConverter;
+import io.github.petersonaraujo.arquitetura_api.adapter.entity.UsuarioEntity;
+import io.github.petersonaraujo.arquitetura_api.adapter.mappers.output.UsuarioMapperEntity;
 import io.github.petersonaraujo.arquitetura_api.adapter.repository.UsuarioRepository;
 import io.github.petersonaraujo.arquitetura_api.core.domain.Usuario;
 import io.github.petersonaraujo.arquitetura_api.core.ports.output.UsuarioRepositoryPort;
@@ -12,14 +14,11 @@ import org.springframework.stereotype.Component;
 public class UsuarioRepositoryAdapter implements UsuarioRepositoryPort {
 
     private final UsuarioRepository usuarioRepository;
-    private final UsuarioMapper usuarioMapper;
+    private final UsuarioMapperEntity usuarioMapperEntity;
 
     @Override
     public Usuario create(Usuario usuario) {
-
-
-
-        return usuarioMapper.toModel(usuarioRepository.save(usuarioMapper.toEntity(usuario)));
-
+        UsuarioEntity usuarioConvertido = usuarioMapperEntity.toEntity(usuario);
+        return usuarioMapperEntity.toModel(usuarioRepository.save(usuarioConvertido));
     }
 }

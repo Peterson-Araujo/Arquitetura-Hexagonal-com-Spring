@@ -13,6 +13,6 @@ public class UsuarioDto {
     private String email;
     private String senha;
     private Boolean administrador;
-    private String nome;
+    private String pessoa;
 
 }

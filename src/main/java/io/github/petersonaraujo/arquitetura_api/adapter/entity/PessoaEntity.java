@@ -6,19 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "tb_pessoa")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_usuario")
-public class UsuarioEntity {
+public class PessoaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String email;
-    private String senha;
-    private Boolean administrador;
-    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-    @JoinColumn(name = "pessoa_id")
-    private PessoaEntity pessoa;
+    private String nome;
 }
