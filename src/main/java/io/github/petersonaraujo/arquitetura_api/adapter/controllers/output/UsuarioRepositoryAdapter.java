@@ -1,6 +1,5 @@
 package io.github.petersonaraujo.arquitetura_api.adapter.controllers.output;
 
-import io.github.petersonaraujo.arquitetura_api.adapter.controllers.converters.UsuarioConverter;
 import io.github.petersonaraujo.arquitetura_api.adapter.entity.UsuarioEntity;
 import io.github.petersonaraujo.arquitetura_api.adapter.mappers.output.UsuarioMapperEntity;
 import io.github.petersonaraujo.arquitetura_api.adapter.repository.UsuarioRepository;

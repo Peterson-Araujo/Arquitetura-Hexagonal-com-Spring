@@ -1,6 +1,5 @@
 package io.github.petersonaraujo.arquitetura_api.adapter.controllers.input;
 
-import io.github.petersonaraujo.arquitetura_api.adapter.controllers.converters.UsuarioConverter;
 import io.github.petersonaraujo.arquitetura_api.adapter.dtos.UsuarioDto;
 import io.github.petersonaraujo.arquitetura_api.adapter.mappers.input.UsuarioMapperDto;
 import io.github.petersonaraujo.arquitetura_api.core.domain.Usuario;
